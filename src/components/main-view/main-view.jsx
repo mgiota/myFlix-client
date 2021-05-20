@@ -173,8 +173,9 @@ class MainView extends React.Component {
           exact
           path="/"
           render={() => {
-            if (!user.Username) return <div className="main-view" />;
-            if (user.Username) return <div className="main-view" />;
+            if (!user.Username) return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
+            if (movies.length === 0) return <div className="main-view" />;
+            return <MoviesList movies={movies} />;
           }}
         />
 
@@ -182,7 +183,8 @@ class MainView extends React.Component {
           exact
           path="/login"
           render={() => {
-            if (user.Username) return <div className="main-view" />;
+            if (movies.length === 0) return <div className="main-view" />;
+            if (user.Username) return <MoviesList movies={movies} />;
             return <LoginView onBackClick={() => history.goBack()} onLoggedIn={(user) => this.onLoggedIn(user)} />;
           }}
         />
@@ -192,7 +194,7 @@ class MainView extends React.Component {
             exact
             path="/movies"
             render={() => {
-              if (!user.Username) <div className="main-view" />;
+              if (!user.Username) return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
               if (movies.length === 0) return <div className="main-view" />;
               return <MoviesList movies={movies} />;
             }}
@@ -202,7 +204,8 @@ class MainView extends React.Component {
             exact
             path="/users"
             render={({ history }) => {
-              if (user.Username) return <div className="main-view" />;
+              if (movies.length === 0) return <div className="main-view" />;
+              if (user.Username) return <MoviesList movies={movies} />;
               return <RegistrationView onBackClick={() => history.goBack()} />;
             }}
           />
@@ -211,7 +214,7 @@ class MainView extends React.Component {
             path="/users/:username"
             render={({ history }) => {
               if (movies.length === 0) return <div className="main-view" />;
-              if (!user.Username || localStorage.getItem('user') === null) <div className="main-view" />;
+              if (!user.Username || localStorage.getItem('user') === null) return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
               if (requestType === 'put') {
                 return (
                   <UpdateProfile
@@ -237,7 +240,7 @@ class MainView extends React.Component {
           <Route
             path="/movies/:movieId"
             render={({ match, history }) => {
-              if (user.length === 0 || user === null) return <div className="main-view" />;
+              if (user.length === 0 || user === null) return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
               if (movies.length === 0) return <div className="main-view" />;
               return (
                 <MovieInfoView
