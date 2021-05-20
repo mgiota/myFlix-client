@@ -1,0 +1,137 @@
+#registration-container {
+  border-style: solid;
+  border-radius: 5%;
+  padding: 30px;
+  background-color: antiquewhite;
+}
+
+#registration-container h3 {
+  text-align: center;
+}
+
+#bootstrap-overrides form {
+  margin-top: 40px;
+  font-weight: bolder;
+}
+.title {
+  font-family: "Chango", cursive;
+  color: black;
+  font-size: 6rem;
+}
+
+#bootstrap-overrides .form-control {
+  border: 1px solid lightslategray;
+}
+
+#bootstrap-overrides .btn-info {
+  background-color: thistle;
+}
+#bootstrap-overrides .movie-poster img,
+#bootstrap-overrides .movie-poster button.btn.btn-link,
+#bootstrap-overrides .movie-poster button.btn.btn-info {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+#bootstrap-overrides .movie-data button.btn.btn-link {
+  margin: 0px;
+  width: 50%;
+}
+#bootstrap-overrides .movie-data .value {
+  margin-bottom: 15px;
+}
+#bootstrap-overrides .movie-data .card-text {
+  font-weight: bold;
+}
+#bootstrap-overrides .movie-data .card-text .value {
+  font-weight: 400;
+}
+.modal-content {
+  background-color: whitesmoke;
+  text-align: center;
+}
+.modal-content .modal-header {
+  justify-content: center;
+}
+.modal-content .btn {
+  width: 100%;
+}
+#bootstrap-overrides .header-container {
+  display: inline-flex;
+}
+
+#bootstrap-overrides .header-container .profile-logout-btns button.btn.btn-secondary {
+  justify-content: flex-end !important;
+  display: inline-block;
+  width: 70%;
+}
+
+#bootstrap-overrides .header-container .profile-logout-btns button.btn.btn-link {
+  justify-content: flex-end !important;
+  display: inline-block;
+  width: 70%;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: bisque;
+}
+
+.app-container {
+  background-color: bisque;
+  height: 100%;
+}
+
+#bootstrap-overrides .btn {
+  font-size: larger;
+  border-color: violet;
+  padding: 10px;
+  margin: 4px;
+}
+
+button.btn.btn-link {
+  width: 100%;
+}
+
+button.btn.btn-info {
+  width: 100%;
+}
+
+#bootstrap-overrides img {
+  border-style: solid;
+  border-color: violet;
+}
+
+#bootstrap-overrides .card {
+  background-color: whitesmoke;
+  border-color: violet;
+  min-width: 14rem;
+  margin: 10px;
+}
+#bootstrap-overrides .card .card-body {
+  background-color: whitesmoke;
+}
+#bootstrap-overrides .card .card-header {
+  font-size: 3rem;
+}
+#bootstrap-overrides .card .card-title {
+  padding-top: 10px;
+}
+
+#bootstrap-overrides .card-subtitle {
+  color: dimgrey;
+  padding-bottom: 10px;
+  font-size: 1.4em;
+}
+
+#bootstrap-overrides .card-body {
+  background-color: whitesmoke;
+}
+
+/*# sourceMappingURL=/src.78399e21.css.map */
